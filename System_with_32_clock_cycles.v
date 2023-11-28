@@ -9,9 +9,9 @@ input clk , start , d,
   wire [95:0] fec_out;
   
   CRC C(d , clk , start , CRC_out);
-  FEC F(clk, start ,fec_in , fec_out,done_fec);
+  FEC F(clk, start ,fec_in , fec_out,done_fec)
   
-  Interleaver I(fec_out[95:88], fec_out[87:80] , fec_out[79:72] , fec_out[71:64] , fec_out[63:56] , fec_out[55:48] , fec_out[47:40] , fec_out[39:32] , fec_out[31:24] , fec_out[23:16] , fec_out[15:8] , fec_out[7:0] , final_ans); 
+   
   
 endmodule
 
